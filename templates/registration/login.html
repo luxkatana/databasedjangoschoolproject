@@ -1,0 +1,8 @@
+{%extends "registertest/base.html"%}
+{%load crispy_forms_tags%}
+{%block main_body%}
+<form method="POST" class="form-group"> 
+    {%csrf_token%}
+    {{form| crispy}}
+    <button type="submit">login</button>
+{%endblock%}
